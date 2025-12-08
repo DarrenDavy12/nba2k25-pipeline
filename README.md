@@ -20,16 +20,19 @@ This project:
 
 
 
-## 📂 Repo Structure
+# 📂 Repo Structure
 
-# raw and cleaned CSVs
+
+
+### raw and cleaned CSVs
 data/ 
 
-# ETL scripts
+
+### ETL scripts
 src/ 
 
 
-# Dash app
+### Dash app
 dashboard/
 
 
