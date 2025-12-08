@@ -100,7 +100,7 @@ Professional repository organization
 
 
 
-📸 Screenshots - Check images folder to see screenshots! 
+📸 Screenshots - Remember to check images folder to see screenshots! 
 
 
 
