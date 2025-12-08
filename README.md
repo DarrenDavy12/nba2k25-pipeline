@@ -2,6 +2,9 @@
 
 An end-to-end data engineering project demonstrating extraction, transformation, and loading (ETL) of NBA 2K25 player data, with an interactive dashboard.
 
+<br>
+
+
 ## 🏀 Project Overview
 
 This project:
@@ -18,7 +21,7 @@ This project:
    - KPI cards: Average Rating, Tallest Player, Total Players
    - Filters by team, position, and rating bucket
 
-
+<br>
 
 # 📂 Repo Structure
 
@@ -37,6 +40,8 @@ dashboard/
 
 
 
+
+<br>
 
 
 ## ⚡ How to Run
