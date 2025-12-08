@@ -18,17 +18,25 @@ This project:
    - KPI cards: Average Rating, Tallest Player, Total Players
    - Filters by team, position, and rating bucket
 
+
+
 ## 📂 Repo Structure
 
-data/ # raw and cleaned CSVs
-src/ # ETL scripts
-dashboard/ # Dash app
+# raw and cleaned CSVs
+data/ 
+
+# ETL scripts
+src/ 
+
+
+# Dash app
+dashboard/
+
+
+
 
 
 ## ⚡ How to Run
-
-
-
 
 1. Clone the repo
 
