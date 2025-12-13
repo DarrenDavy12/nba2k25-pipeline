@@ -1,103 +1,152 @@
 # 🏀 NBA 2K25 Player Data Pipeline
 
-An end-to-end data engineering project demonstrating extraction, transformation, and loading (ETL) of NBA 2K25 player data, with an interactive dashboard.
+## 📌 Project Overview
 
-## 🏀 Project Overview
+This project is an **end-to-end data engineering pipeline** that ingests, transforms, and loads NBA 2K25 player data into a **PostgreSQL database** and exposes it for basic analytics.  
 
-This project:
+The goal is to demonstrate **core data engineering skills**: data ingestion, transformation, validation, storage, and simple visualization.
 
-1. Extracts raw NBA 2K25 player data from CSV.
-2. Transforms the data:
-   - Cleans and fills missing values
-   - Adds derived columns (BMI, rating buckets, position group, salary in millions)
-3. Loads cleaned data into PostgreSQL
-4. Provides an interactive dashboard built with Dash & Plotly:
-   - Top 10 players by overall rating
-   - Overall rating distribution
-   - Number of players per team
-   - KPI cards: Average Rating, Tallest Player, Total Players
-   - Filters by team, position, and rating bucket
+---
 
-## 📂 Repo Structure
+## 🏗️ Architecture
 
-data/ # raw and cleaned CSVs
-src/ # ETL scripts
-dashboard/ # Dash app
+**High-level flow:**
+
+1. **Extract** – Python script loads CSV of NBA 2K25 player data  
+2. **Bronze Layer** – Timestamped raw CSV snapshot saved locally  
+3. **Silver Layer** – Cleaned and validated dataset  
+4. **Load** – Data loaded into PostgreSQL database  
+5. **Analytics** – Query top players, stats, and trends  
+6. **Dashboard** – Simple interactive visualization using Plotly/Dash
 
 
-## ⚡ How to Run
+```markdown
+CSV / API
+↓
+Raw CSV (Bronze)
+↓
+Clean Data (Silver)
+↓
+PostgreSQL Database
+↓
+Plotly/Dash Dashboard
 
 
+---
+
+## 🛠️ Tech Stack
+
+- 🐍 **Python & pandas** – data extraction and transformation  
+- 🐘 **PostgreSQL** – relational storage  
+- 🛠️ **SQLAlchemy** – Python → PostgreSQL connection  
+- 📊 **Plotly / Dash** – interactive dashboard  
+- 🔧 **Git & GitHub** – version control  
+
+---
+
+## 📂 Repository Structure
+
+```markdown
+nba2k25-pipeline/
+│
+├── data/
+│ ├── raw/ # Raw CSV snapshots
+│ └── clean/ # Cleaned CSV outputs
+│
+├── src/
+│ ├── extract.py # Load raw CSV
+│ ├── transform.py # Clean & validate data
+│ └── load.py # Load into PostgreSQL
+│
+├── dashboard/
+│ └── app.py # Plotly/Dash dashboard
+│
+├── README.md
+└── requirements.txt
 
 
-1. Clone the repo
+---
+
+## 🔄 Data Pipeline Steps
+
+### 1️⃣ Extract
+
+- Reads CSV of NBA 2K25 player stats  
+- Saves timestamped snapshot for auditability
+
+### 2️⃣ Transform
+
+- Cleans missing values and duplicates  
+- Normalizes column names  
+- Computes derived fields (if needed)  
+
+### 3️⃣ Load
+
+- Loads data into PostgreSQL tables using SQLAlchemy  
+- Database schema enforces data types
+
+### 4️⃣ Analytics / Dashboard
+
+- Query database for:
+  - 🏆 Top players by overall rating  
+  - 📊 Team stats  
+  - 🏀 Positional and archetype trends  
+- Interactive dashboard visualizes trends
+
+---
+
+## ✅ Data Quality Checks
+
+- ❌ No missing critical fields (`name`, `team`, `overall`)  
+- ❌ Duplicate rows removed  
+- ✅ Numeric columns validated for realistic ranges  
+
+Failures are logged to console.
+
+---
+
+## 🚀 How to Run
+
+1. **Create a virtual environment:**
 
 ```bash
 python3 -m venv nba_venv
 source nba_venv/bin/activate
 
 
-Install dependencies:
 
+2. **Create a virtual environment:**
+
+``` bash
 pip install -r requirements.txt
 
 
-Run extraction:
 
+3. **Run extraction:**
+
+```bash
 python3 src/extract.py
 
 
-Run transformation:
 
+4. **Run transformation:**
+
+```bash
 python3 src/transform.py
 
 
-Load data into PostgreSQL:
 
+5. **Load data into PostgreSQL:**
+
+```bash
 python3 src/load.py
 
 
-Launch dashboard:
 
+6. **Launch dashboard:**
+
+```bash
 python3 dashboard/app.py
-
-
-
-5. Open link in browser 
-Open your browser at: http://127.0.0.1:8050/
-
-
-
-
-🛠 Tech Stack
-
-Python, pandas
-
-PostgreSQL + SQLAlchemy
-
-Dash + Plotly for visualization
-
-
-
-🎯 Key Skills Demonstrated
-
-End-to-end data engineering workflow
-
-Data cleaning & transformation
-
-Database loading & schema design
-
-Interactive dashboard creation with filters, charts, and KPI cards
-
-Professional repository organization
-
-
-
-
-📸 Screenshots - Check images folder to see screenshots! 
-
-
-
 
 
 
