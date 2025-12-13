@@ -1,9 +1,6 @@
-# NBA 2K25 Pipeline
+# 🏀 NBA 2K25 Player Data Pipeline
 
 An end-to-end data engineering project demonstrating extraction, transformation, and loading (ETL) of NBA 2K25 player data, with an interactive dashboard.
-
-<br>
-
 
 ## 🏀 Project Overview
 
@@ -21,57 +18,46 @@ This project:
    - KPI cards: Average Rating, Tallest Player, Total Players
    - Filters by team, position, and rating bucket
 
-<br>
+## 📂 Repo Structure
 
-# 📂 Repo Structure
-
-
-
-### raw and cleaned CSVs
-data/ 
-
-
-### ETL scripts
-src/ 
-
-
-### Dash app
-dashboard/
-
-
-
-
-<br>
+data/ # raw and cleaned CSVs
+src/ # ETL scripts
+dashboard/ # Dash app
 
 
 ## ⚡ How to Run
 
+
+
+
 1. Clone the repo
 
 ```bash
-git clone https://github.com/DarrenDavy12/nba2k25-pipeline.git
-cd nba2k25-pipeline
-
-
-
-2. Create a virtual environment
-
 python3 -m venv nba_venv
 source nba_venv/bin/activate
+
+
+Install dependencies:
+
 pip install -r requirements.txt
 
 
-
-3. Run ETL scripts
+Run extraction:
 
 python3 src/extract.py
+
+
+Run transformation:
+
 python3 src/transform.py
-python3 src/load_clean.py
 
 
+Load data into PostgreSQL:
+
+python3 src/load.py
 
 
-4. Launch the dashboard
+Launch dashboard:
 
 python3 dashboard/app.py
 
@@ -108,7 +94,7 @@ Professional repository organization
 
 
 
-📸 Screenshots - Remember to check images folder to see screenshots! 
+📸 Screenshots - Check images folder to see screenshots! 
 
 
 
