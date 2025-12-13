@@ -20,7 +20,7 @@ The goal is to demonstrate **core data engineering skills**: data ingestion, tra
 6. **Dashboard** – Simple interactive visualization using Plotly/Dash
 
 
-```markdown
+```
 CSV / API
 ↓
 Raw CSV (Bronze)
@@ -30,7 +30,7 @@ Clean Data (Silver)
 PostgreSQL Database
 ↓
 Plotly/Dash Dashboard
-
+```
 
 ---
 
@@ -46,7 +46,7 @@ Plotly/Dash Dashboard
 
 ## 📂 Repository Structure
 
-```markdown
+```
 nba2k25-pipeline/
 │
 ├── data/
@@ -63,6 +63,7 @@ nba2k25-pipeline/
 │
 ├── README.md
 └── requirements.txt
+```
 
 
 ---
@@ -112,42 +113,42 @@ Failures are logged to console.
 ```bash
 python3 -m venv nba_venv
 source nba_venv/bin/activate
-
+```
 
 
 2. **Create a virtual environment:**
 
 ``` bash
 pip install -r requirements.txt
-
+```
 
 
 3. **Run extraction:**
 
 ```bash
 python3 src/extract.py
-
+```
 
 
 4. **Run transformation:**
 
 ```bash
 python3 src/transform.py
-
+```
 
 
 5. **Load data into PostgreSQL:**
 
 ```bash
 python3 src/load.py
-
+```
 
 
 6. **Launch dashboard:**
 
 ```bash
 python3 dashboard/app.py
-
+```
 
 
 
