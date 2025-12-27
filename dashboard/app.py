@@ -16,7 +16,7 @@ import plotly.express as px
 # NBA colors: Simple red/orange/yellow/green/gray for rating bucket
 
 # ---- Database connection ----
-DB_USER = "darrendavy"
+DB_USER = "<db_username>"
 DB_PASS = "<db_pwd>"
 DB_HOST = "localhost"
 DB_PORT = "5432"
