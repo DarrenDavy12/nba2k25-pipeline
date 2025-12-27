@@ -17,7 +17,7 @@ import plotly.express as px
 
 # ---- Database connection ----
 DB_USER = "darrendavy"
-DB_PASS = "IgTiYzXEYDs"
+DB_PASS = "<db_pwd>"
 DB_HOST = "localhost"
 DB_PORT = "5432"
 DB_NAME = "nba2k25"
