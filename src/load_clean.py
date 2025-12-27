@@ -2,10 +2,10 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 # ---- Database connection ----
-DB_USER = "darrendavy"         # your Mac username
-DB_PASS = "IgTiYzXEYDs"       # the password you set
+DB_USER = "<mac_username>"         # your Mac username
+DB_PASS = "<server_pwd>"       # the password you set
 DB_HOST = "localhost"
-DB_PORT = "5432"
+DB_PORT = "<port_no>"
 DB_NAME = "nba2k25"
 
 engine = create_engine(f"postgresql+psycopg2://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}")
