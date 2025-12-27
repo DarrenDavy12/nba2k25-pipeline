@@ -3,8 +3,8 @@ from sqlalchemy import create_engine
 import os
 
 # Database connection details
-DB_USER = "darrendavy"  # usually your Mac username
-DB_PASS = "IgTiYzXEYDs"                   # leave blank if no password
+DB_USER = "<mac_username>"  # usually your Mac username
+DB_PASS = "<server_pwd>"                   # leave blank if no password
 DB_HOST = "localhost"
 DB_PORT = "5432"
 DB_NAME = "nba2k25"
